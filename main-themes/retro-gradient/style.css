@@ -260,10 +260,3 @@ form input:focus {
   transform: rotate(-45deg);
 }
 
-.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-}
-
-.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(-35deg);
-}
