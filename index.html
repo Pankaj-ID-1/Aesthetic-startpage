@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main-themes/blue/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>New Tab</title>
+    <link rel="icon" type="image/x-icon" href="home.svg">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <input type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a onclick="changeCSS('blue',0)">blue</a></li>
+          <li><a onclick="changeCSS('cherry',0)">cherry</a></li>
+          <li><a onclick="changeCSS('violet',0)">violet</a></li>
+          <li><a onclick="changeCSS('green',0)">green</a></li>
+          <li><a onclick="changeCSS('mesh-purple',0)">mesh-purple</a></li>
+          <li><a onclick="changeCSS('orange',0)">orange</a></li>
+          <li><a onclick="changeCSS('purple',0)">purple</a></li>
+          <li><a onclick="changeCSS('white',0)">white</a></li>
+          <li><a onclick="changeCSS('retro-gradient',0)">retro-gradient</a></li>
+          <li><a onclick="changeCSS('summer-wave',0)">summer-wave</a></li>
+          <li><a onclick="changeCSS('Animated-Gradient',0)">animated-gradient</a></li>
+          <li><a onclick="changeCSS('aesthetic',0)">aesthetic</a></li>
+          <li><a onclick="changeCSS('bluish-indigo',0)">bluish-indigo</a></li>
+          <li><a onclick="changeCSS('gradient',0)">gradient</a></li>
+          <li><a onclick="changeCSS('gray',0)">gray</a></li>
+          <li><a onclick="changeCSS('green',0)">green</a></li>
+          <li><a onclick="changeCSS('green-retro',0)">green-retro</a></li>
+          <li><a onclick="changeCSS('light-dark-blue',0)">light-dark-blue</a></li>
+          <li><a onclick="changeCSS('lonely',0)">lonely</a></li>
+          <li><a onclick="changeCSS('minimal',0)">minimal</a></li>
+          <li><a onclick="changeCSS('night light theme',0)">night light theme</a></li>
+          <li><a onclick="changeCSS('peach',0)">peach</a></li>
+          <li><a onclick="changeCSS('pink-blue',0)">pink-blue</a></li>
+          <li><a onclick="changeCSS('purple',0)">purple</a></li>
+          <li><a onclick="changeCSS('retro-gradient',0)">retro-gradient</a></li>
+          <li><a onclick="changeCSS('snehal',0)">snehal</a></li>
+          <li><a onclick="changeCSS('yellow-mesh',0)">yellow-mesh</a></li>
+          <li><a onclick="changeCSS('synthwave',0)">synthwave</a></li>
+          <li><a onclick="changeCSS('Retro2077',0)">Retro2077</a></li>
+          <li><a onclick="changeCSS('Animated-Gradient',0)">animated-gradient</a></li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <div class="bg"></div>
+      <div class="maincard">
+        <div class="search">
+          <form onsubmit="return search()">
+            <label for="search_box" autofocus>> find / </label>
+            <input
+              type="text"
+              placeholder="Type Here"
+              name="search_box"
+              id="search_box"
+              autocomplete="off"
+              autofocus
+            />
+          </form>
+        </div>
+        <div class="content">
+          <div class="image">
+            <img
+              id="img"
+              src="./main-themes/blue/images/gif.gif"
+              alt="No image"
+            />
+          </div>
+          <div id="links" class="links">
+              <!-- leetcode problems leetcodecontest codeforces codechef drive youtube mail olamovies mkvcinema
+                dsatree striver mega gfg code studio  cryptomail tempmail namso gen-->
+              <section>
+                <h3>Google</h3>
+                <ul>
+                  <li><a href="https://www.youtube.com/">Youtube</a></li>
+                  <li><a href="https://drive.google.com">Drive</a></li>
+                  <li><a href="https://mail.google.com/mail/u/0/">Gmail</a></li>
+                  <li><a href="https://github.com/Nainish-Rai">Custom</a></li>
+                </ul>
+              </section>
+              <section>
+              <h3>Coding</h3>
+              <ul>
+                <li><a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Striver</a></li>
+                <li><a href="https://leetcode.com/contest/">LC Contest</a></li>
+                <li><a href="https://leetcode.com/problemset/all/">LC Problems</a></li>
+                <li><a href="https://codeforces.com/contests">CodeForces</a></li>
+                <li><a href="https://practice.geeksforgeeks.org/events/rec/gfg-weekly-coding-contest">Geeks For Geeks</a></li>
+                <li><a href="https://www.codechef.com/contests?itm_medium=navmenu&itm_campaign=allcontests">CodeChef</a></li>
+              </ul>
+            </section>
+            <section>
+              <h3>Misc</h3>
+              <ul>
+                <li><a href="https://mkvcinemas.dad/">MKV Cinema</a></li>
+                <li><a href="https://olamovies.boats/">Ola Movies</a></li>
+                <li><a href="https://cryptogmail.com/">CryptoMail</a></li>
+                <li><a href="https://FreeCodeCamp.org">FreeCodeCamp</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let theme = localStorage.getItem("selected-theme");
+    if (theme) {
+      let selectedTheme = document.createElement("link");
+      selectedTheme.setAttribute("rel", "stylesheet");
+      selectedTheme.setAttribute("type", "text/css");
+      selectedTheme.setAttribute("href", `./main-themes/${theme}/style.css`);
+      changeImgSrc(theme);
+      // console.log(selectedTheme);
+      var oldlink = document.getElementsByTagName("link").item(0);
+      document
+        .getElementsByTagName("head")
+        .item(0)
+        .replaceChild(selectedTheme, oldlink);
+    }
+
+    function changeCSS(cssFile, cssLinkIndex) {
+      console.log("Onclick working");
+      var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("type", "text/css");
+      newlink.setAttribute("href", `./main-themes/${cssFile}/style.css`);
+      changeImgSrc(cssFile);
+      document
+        .getElementsByTagName("head")
+        .item(cssLinkIndex)
+        .replaceChild(newlink, oldlink);
+      // console.log(newlink);
+      localStorage.setItem("selected-theme", cssFile);
+    }
+    function changeImgSrc(cssFile) {
+      var img_bar = document.getElementById("img");
+      img_bar.src = `./main-themes/${cssFile}/images/gif.gif`;
+    }
+
+    const search_url = "https://www.google.com/";
+
+    function search() {
+      const is_url = /^(((http)|(https)):\/\/)?(www\.)?[a-zA-Z0-9]+\.[a-zA-Z]+\/?([a-zA-Z0-9/?=&%-_]+)?$/;
+      const is_ip = /^(((http)|(https)):\/\/)?([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}|localhost)(:[0-9]{1,5})?(\/[a-zA-Z0-9/?=&%-_]+)?$/;
+
+      const search_term = document.getElementById("search_box").value;
+      const url_match = search_term.match(is_url);
+      const ip_match = search_term.match(is_ip);
+      if (url_match != null) {
+        window.location.href = url_match[0].substring(0, 4) == "http" ? url_match[0] : "https://" + url_match[0];
+      } else if (ip_match != null) {
+        window.location.href = ip_match[0].substring(0, 4) == "http" ? ip_match[0] : "http://" + ip_match[0];
+      } else {
+        window.location.href = search_url + encodeURIComponent(search_term);
+      }
+
+      return false;
+    }
+
+  </script>
+</html>
